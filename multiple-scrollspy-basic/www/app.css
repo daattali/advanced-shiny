@@ -1,0 +1,26 @@
+#tab1-content div {
+  height: 500px;
+  border: 1px solid #DDD;
+}
+#tab2-content div {
+  height: 900px;
+  border: 1px solid #DDD;
+}
+#myscrollspy {
+  position: fixed;
+  top: 300px;
+  left: 100px;
+}
+#myscrollspy li > a {
+  padding: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #DDD;
+  margin-bottom: 5px;
+}
+#myscrollspy li > a:hover {
+  background-color: #AAA;
+}
+#myscrollspy li.active > a {
+  background-color: #444;
+}

@@ -1,0 +1,37 @@
+#tab1-content .scrollspy-section {
+  height: 500px;
+  border: 1px solid #DDD;
+}
+#tab1-scrollspy {
+  position: fixed;
+}
+#tab1-scrollspy li > a {
+  background-color: #FFF;
+}
+#tab1-scrollspy li > a:hover {
+  background-color: #EEE;
+}
+#tab1-scrollspy li.active > a {
+  background-color: #AAA;
+}
+#tab2-content .scrollspy-section {
+  height: 900px;
+  border: 1px solid #DDD;
+}
+#tab2-scrollspy {
+  position: fixed;
+  top: 300px;
+}
+#tab2-scrollspy li > a {
+  padding: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #DDD;
+  margin-bottom: 5px;
+}
+#tab2-scrollspy li > a:hover {
+  background-color: #AAA;
+}
+#tab2-scrollspy li.active > a {
+  background-color: #444;
+}
