@@ -2,7 +2,7 @@
 
 *Dean Attali, July 2015*
 
-This is purely a JavaScript app and doesn't have much Shiny/R involved.  In order to share an image on social media, you need to provide a URL for the image. This means that if you generate an image in Shiny and want to share the image, you need to host it somewhere public. The easiest way to do this is to download the image to somewhere on your server that's publicly accessible and give the URL for that location as the image. The image URL is only needed at the moment of sharing, it doesn't have to be alive afterwards, so it'd be good to have a cron job that deletes images older than a few minutes.
+This is purely a JavaScript app and doesn't have much Shiny/R involved.  In order to share an image on LinkedIn, you need to provide a URL for the image. This means that if you generate an image in Shiny and want to share the image, you need to host it somewhere public. The easiest way to do this is to download the image to somewhere on your server that's publicly accessible and give the URL for that location as the image. The image URL is only needed at the moment of sharing, it doesn't have to be alive afterwards, so it'd be good to have a cron job that deletes images older than a few minutes. The conventional way of sharing an image on Facebook also requires a URL, but there is a workaround that can work with the base64 representation of an image.
 
 **LinkedIn:**
 
@@ -11,6 +11,8 @@ I couldn't get the R-based OAuth authentication working using `httr` package, so
 **Facebook:**
 
 Since LinkedIn is using the pure JavaScript approach, I chose to do the same thing with Facebook. Similarly to with LinkedIn, a user will be asked to log in if they aren't, and then the image + message + URL will be shared.  **Important**: The Facebook app settings do not allow a URL of `localhost` or `127.0.0.1` to be used, so in order to run this app locally you will need to change the URL to `fuf.me` (the port number doesn't matter, it will work with any port). If you want to use this in a non local server, you need to create a new Facebook app and give it the URL of your app.
+
+There are two Facebook share buttons: the first one uses the conventional way of sharing an image on Facebook using an image URL. The second one shares a base64 encoded image (which means we get get the image data straight from Shiny), but it's a little bit more hacky.
 
 **Twitter:**
 
