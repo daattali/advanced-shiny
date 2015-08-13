@@ -8,7 +8,6 @@ ui <- navbarPage(
     useShinyjs(),
     extendShinyjs("www/app-shinyjs.js"),
     includeCSS("www/app.css"),
-    includeScript("www/app.js"),
     includeScript("https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.3/jquery.scrollTo.min.js")
   ),
   

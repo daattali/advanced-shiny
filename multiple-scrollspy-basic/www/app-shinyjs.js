@@ -1,3 +1,8 @@
+// initialize common scrollspy control
+shinyjs.init = function() {
+  $('body').scrollspy({ target: '#myscrollspy' });
+}
+
 // update scrollspy control with the contents of the current tab
 // and refresh the control to make the changes take effect
 shinyjs.updateScrollspy = function(tab) {

@@ -1,3 +1,8 @@
+// initialize common scrollspy control
+shinyjs.init = function() {
+  $('body').scrollspy({ target: '.active-scrollspy' });
+}
+
 // update the active scrollspy control and refresh so that it will function
 shinyjs.updateScrollspy = function(tab) {
   // make all scrollspy controls inactive

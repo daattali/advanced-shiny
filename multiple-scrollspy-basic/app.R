@@ -9,7 +9,6 @@ ui <- navbarPage(
     useShinyjs(),
     extendShinyjs("www/app-shinyjs.js"),
     includeCSS("www/app.css"),
-    includeScript("www/app.js"),
     
     # create a common scrollspy
     div(
