@@ -1,44 +1,35 @@
 library(shiny)
 library(shinyjs)
 
+NUM_PAGES <- 5
+
 shinyApp(
   ui = fluidPage(
     useShinyjs(),
-    div(
-      id = "step1",
-      "Step 1"
-    ),
     hidden(
-      div(
-        id = "step2",
-        "Step 2"
-      ),
-      div(
-        id = "step3",
-        "Step 3"
-      ),
-      div(
-        id = "step4",
-        "Step 4"
-      )
+      lapply(seq(NUM_PAGES), function(i) {
+        div(
+          class = "page",
+          id = paste0("step", i),
+          "Step", i
+        )
+      })
     ),
     br(),
     actionButton("prevBtn", "< Previous"),
     actionButton("nextBtn", "Next >")
   ),
   server = function(input, output, session) {
-    numPages <- 4
-    rv <- reactiveValues(page = 1, prevPage = 1)
+    rv <- reactiveValues(page = 1)
     
     observe({
       toggleState(id = "prevBtn", condition = rv$page > 1)
-      toggleState(id = "nextBtn", condition = rv$page < numPages)
-      hide(sprintf("step%s", rv$prevPage))
+      toggleState(id = "nextBtn", condition = rv$page < NUM_PAGES)
+      hide(selector = ".page")
       show(sprintf("step%s", rv$page))
     })
     
     navPage <- function(direction) {
-      rv$prevPage <- rv$page
       rv$page <- rv$page + direction
     }
     
