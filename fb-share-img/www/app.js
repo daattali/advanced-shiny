@@ -53,36 +53,11 @@ app = function() {
         });
       };      
       
-      // register click event on linkedin share button
-      $("#linkedinShareBtn").click(function() {
-        IN.User.authorize(app.linkedinShare);
-      });
-      
       // register click event on facebook share button
       $('#fbShareBtn').click(app.facebookShare);
       
       // register click event on facebook share base64 image button
       $('#fbShare64Btn').click(app.facebookShare64Click);
-    },
-    
-    // share image on linkedin
-    linkedinShare : function() {
-      var params = { 
-        "content": {
-          "title" : payload.title,
-          "description" : payload.description,
-          "submitted-image-url" : payload.picture,
-          "submitted-url" : payload.link
-        },
-        "visibility": { 
-          "code": "anyone"
-        }
-      };
-      IN.API.Raw("/people/~/shares?format=json")
-        .method("POST")
-        .body(JSON.stringify(params))
-        .result(function(o){ alert("LinkedIn share success!"); console.log(o); })
-        .error(function(o){ alert("LinkedIn shard error"); console.log(o); });
     },
 
     // share image on facebook    

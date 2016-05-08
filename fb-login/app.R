@@ -1,7 +1,6 @@
 # Dean Attali, July 2015
 
 library(shiny)
-library(shinyjs)
 
 ui <- fluidPage(
   tags$head(

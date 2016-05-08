@@ -1,4 +1,4 @@
-# Update any Shiny input without knowing input type 
+# Press the Enter key to simulate a button press
 
 *Dean Attali, July 2015*
 

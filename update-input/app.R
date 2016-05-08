@@ -10,7 +10,7 @@ ui <- fluidPage(
   textInput("text", "Text input", "some text"),
   selectInput("select", "Select input", LETTERS),
   numericInput("numeric", "Numeric input", 5),
-  actionButton("btn", "Reset text to 'new value', select to 'G', and number to '9'", class = "btn-primary")
+  actionButton("btn", "Update text to 'new value', select to 'G', and number to '9'", class = "btn-primary")
 )
 
 server <- function(input, output, session) {

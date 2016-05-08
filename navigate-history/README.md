@@ -15,3 +15,7 @@ For example, try this sequence of events to see what this app can do:
 - copy the URL
 - click the "next" button in your browser navigation
 - in a different window, go to the URL that you copied earlier (it will automatically navigate to the search page and show the search term)
+
+The code is a bit complex and might take some time to understand how it works. This is certainly not an ideal solution, I'd love to know if someone has a nicer method for navigating a Shiny app. It's possible that the core Shiny team will work on this and that soon this functionality will be native to shiny.
+
+This example makes use of the [shinyjs](https://github.com/daattali/shinyjs) package to call custom JavaScript functions.

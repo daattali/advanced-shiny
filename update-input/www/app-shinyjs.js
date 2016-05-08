@@ -1,6 +1,9 @@
 // Given an element id, tell Shiny what the input type of that element is
 shinyjs.getInputType = function(params) {
-  params = shinyjs.getParams(params, {id:null, shinyUpdateInputId:null});
+  params = shinyjs.getParams(params, {
+    id : null,
+    shinyUpdateInputId : null
+  });
   var id = params.id;
   var $el = $('#' + id);
   // find the enclosing shiny input container for the given id

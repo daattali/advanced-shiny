@@ -1,12 +1,11 @@
 # Dean Attali, July 2015
 
 library(shiny)
-library(shinyjs)
 
 ui <- fluidPage(
   tags$head(
-    includeScript("www/api.js"),
-    includeScript("www/app.js")
+    includeScript("www/api.js"),  # Always include this file
+    includeScript("www/app.js")   # JavaScript specific to this app
   ),
   actionButton("getRversion", "R version API call"),
   actionButton("errorFunction", "API call with error")
@@ -18,7 +17,6 @@ server <- function(input, output, session) {
   source("api.R", local = TRUE)$value
  
   api.getRversion <- function(params) {
-    # do some stuff
     # don't forget you have access to all the parameters sent by javascript
     # inside the "params" variable
     
@@ -33,7 +31,7 @@ server <- function(input, output, session) {
   api.errorExample <- function(params) {
     # this function will throw an error to show what happens on the javsacript
     # side when an error occurs
-    stop("some error happened")
+    stop("sample error message")
   } 
 }
 

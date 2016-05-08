@@ -13,8 +13,8 @@ updateableInput <- function(inputType) {
 
 # define what Shiny inputs you want to support
 # (the following three common input types are tested; the code here probably will
-# not work as-is for ALL inputs so let me know if there's another input type
-# you need supported)
+# not work as-is for ALL inputs but you should be able to modify it slightly for
+# other inputs)
 textInput <- updateableInput("Text")
 numericInput <- updateableInput("Numeric")
 selectInput <- updateableInput("Select")

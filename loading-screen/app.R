@@ -15,32 +15,32 @@ appCSS <- "
 }
 "
 
-shinyApp(
-  ui = fluidPage(
-    useShinyjs(),
-    inlineCSS(appCSS),
-    
-    # Loading message
-    div(
-      id = "loading-content",
-      h2("Loading...")
-    ),
-    
-    # The main app code goes here
+ui <- fluidPage(
+  useShinyjs(),
+  inlineCSS(appCSS),
+  
+  # Loading message
+  div(
+    id = "loading-content",
+    h2("Loading...")
+  ),
+  
+  # The main app code goes here
+  hidden(
     div(
       id = "app-content",
-      p("This is a simple example of a Shiny app with a loading screen."),
-      p("You can view the source code",
-        a(href = "https://github.com/daattali/shiny-server/blob/master/loading-screen",
-          "on GitHub")
-      )
+      p("This is a simple example of a Shiny app with a loading screen.")
     )
-  ),
-  server = function(input, output) {
-    # Simulate work being done for 1 second
-    Sys.sleep(1)
-    
-    # Hide the loading message when the rest of the server function has executed
-    hide(id = "loading-content", anim = TRUE, animType = "fade")    
-  }
+  )
 )
+
+server <- function(input, output) {
+  # Simulate work being done for 1 second
+  Sys.sleep(1)
+  
+  # Hide the loading message when the rest of the server function has executed
+  hide(id = "loading-content", anim = TRUE, animType = "fade")    
+  show("app-content")
+}
+
+shinyApp(ui, server)
