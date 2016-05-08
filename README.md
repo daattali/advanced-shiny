@@ -15,34 +15,6 @@ runApp(shinyApp(
 ))
 ```
 
-collapsing (or showing) sidebar in shinydashboard
-
-```
-library(shinydashboard)
-library(shinyjs)
-
-shinyApp(
-  ui = 
-    dashboardPage(
-      dashboardHeader(),
-      dashboardSidebar(),
-      dashboardBody(
-        shinyjs::useShinyjs(),
-        actionButton("showSidebar", "Show sidebar"),
-        actionButton("hideSidebar", "Hide sidebar")
-      )
-    ),
-  server = function(input, output, session) {
-    observeEvent(input$showSidebar, {
-      shinyjs::removeClass(selector = "body", class = "sidebar-collapse")
-    })
-    observeEvent(input$hideSidebar, {
-      shinyjs::addClass(selector = "body", class = "sidebar-collapse")
-    })
-  }
-)
-```
-
 fix uploaded file names
 
 ```
