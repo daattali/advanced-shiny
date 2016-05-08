@@ -25,7 +25,7 @@ runApp(shinyApp(
     tags$head(tags$style(HTML(mycss))),
     actionButton("btn", "Plot (takes 2 seconds)"),
     div(id = "plot-container",
-        tags$img(src = "http://www.ajaxload.info/images/exemples/35.gif",
+        tags$img(src = "http://i.imgur.com/hTbi7JM.gif",
                  id = "loading-spinner"),
         plotOutput("plot")
     )
