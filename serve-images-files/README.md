@@ -7,3 +7,5 @@ It is possible to serve an image or another file directly from your Shiny app in
 The main idea is to use `session$clientData$registerDataObj` to associate a file with a specific endpoint URL. Since this URL is generated dynamically and cannot be used by the user before accessing the app, the Shiny app automatically redirects the user to the requested file after generating it and figuring out the URL internally.
 
 This example makes use of the [shinyjs](https://github.com/daattali/shinyjs) package.
+
+[![Demo](./serve-images-files.gif)](./serve-images-files.gif)
