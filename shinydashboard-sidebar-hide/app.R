@@ -14,10 +14,10 @@ ui <- dashboardPage(
 
 server <-function(input, output) {
   observeEvent(input$showSidebar, {
-    removeClass(selector = "body", class = "sidebar-collapse")
+    shinyjs::removeClass(selector = "body", class = "sidebar-collapse")
   })
   observeEvent(input$hideSidebar, {
-    addClass(selector = "body", class = "sidebar-collapse")
+    shinyjs::addClass(selector = "body", class = "sidebar-collapse")
   })
 }
 
