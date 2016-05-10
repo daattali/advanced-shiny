@@ -8,4 +8,6 @@ The main idea is to use `session$clientData$registerDataObj` to associate a file
 
 This example makes use of the [shinyjs](https://github.com/daattali/shinyjs) package.
 
+---
+
 [![Demo](./serve-images-files.gif)](./serve-images-files.gif)

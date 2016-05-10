@@ -6,4 +6,6 @@ This app demonstrates how to write a Shiny app that has a sequence of different 
 
 This example makes use of the [shinyjs](https://github.com/daattali/shinyjs) package to show/hide the pages and to enable/disable the buttons.
 
+---
+
 [![Demo](./multiple-pages.gif)](./multiple-pages.gif)

@@ -6,4 +6,6 @@ This simple app shows how to add a "Loading..." screen overlaying the main app w
 
 This example makes use of the [shinyjs](https://github.com/daattali/shinyjs) package to show/hide elements.
 
+---
+
 [![Demo](./loading-screen.gif)](./loading-screen.gif)

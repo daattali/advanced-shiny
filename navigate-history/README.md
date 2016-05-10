@@ -20,4 +20,6 @@ The code is a bit complex and might take some time to understand how it works. T
 
 This example makes use of the [shinyjs](https://github.com/daattali/shinyjs) package to call custom JavaScript functions.
 
+---
+
 [![Demo](./navigate-history.gif)](./navigate-history.gif)

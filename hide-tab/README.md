@@ -6,4 +6,6 @@ This app demonstrates how `shinyjs` can be used to hide/show a specific tab in a
 
 This example makes use of the [shinyjs](https://github.com/daattali/shinyjs) package to show/hide the tab.
 
+---
+
 [![Demo](./hide-tab.gif)](./hide-tab.gif)
