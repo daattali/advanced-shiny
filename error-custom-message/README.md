@@ -1,4 +1,4 @@
-# Show user a generic error message when a Shiny error occurs inan output
+# Show user a generic error message when a Shiny error occurs in an output
 
 *Dean Attali, July 2015*
 
