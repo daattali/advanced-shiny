@@ -30,116 +30,116 @@ global.R, splitting off big ui/server into files
 
 <h3 id="api-ajax">Simple AJAX system for Shiny apps (JS -> R -> JS communication)</h3>
 
-**[Link to code](./#api-ajax)**
+**[Link to code](./api-ajax)**
 
 
 <h3 id="auto-kill-app">Automatically stop a Shiny app when closing the browser tab</h3>
 
-**[Link to code](./#auto-kill-app)**
+**[Link to code](./auto-kill-app)**
 
 
 <h3 id="busy-indicator">TODO</h3>
 
-**[Link to code](./#busy-indicator)**
+**[Link to code](./busy-indicator)**
 
 
 <h3 id="close-window">Close the window (and stop the app) with a button click</h3>
 
-**[Link to code](./#close-window)**
+**[Link to code](./close-window)**
 
 
 <h3 id="error-custom-message">Show user a generic error message when a Shiny error occurs in an output</h3>
 
-**[Link to code](./#error-custom-message)**
+**[Link to code](./error-custom-message)**
 
 
 <h3 id="fb-login">Facebook login through JavaScript in Shiny</h3>
 
-**[Link to code](./#fb-login)**
+**[Link to code](./fb-login)**
 
 
 <h3 id="fb-share-img">Sharing images on Facebook</h3>
 
-**[Link to code](./#fb-share-img)**
+**[Link to code](./fb-share-img)**
 
 
 <h3 id="hide-tab">Hide a tab</h3>
 
-**[Link to code](./#hide-tab)**
+**[Link to code](./hide-tab)**
 
 
 <h3 id="loading-screen">Loading screen</h3>
 
-**[Link to code](./#loading-screen)**
+**[Link to code](./loading-screen)**
 
 
 <h3 id="multiple-pages">Shiny app with sequence of pages</h3>
 
-**[Link to code](./#multiple-pages)**
+**[Link to code](./multiple-pages)**
 
 
 <h3 id="multiple-scrollspy-advanced">Multiple scrollspy - advanced</h3>
 
-**[Link to code](./#multiple-scrollspy-advanced)**
+**[Link to code](./multiple-scrollspy-advanced)**
 
 
 <h3 id="multiple-scrollspy-basic">Multiple scrollspy - basic</h3>
 
-**[Link to code](./#multiple-scrollspy-basic)**
+**[Link to code](./multiple-scrollspy-basic)**
 
 
 <h3 id="navigate-history">Navigation in a Shiny app</h3>
 
-**[Link to code](./#navigate-history)**
+**[Link to code](./navigate-history)**
 
 
 <h3 id="plot-spinner">Show a spinning "loading" animation while a plot is recalculating</h3>
 
-**[Link to code](./#plot-spinner)**
+**[Link to code](./plot-spinner)**
 
 
 <h3 id="proxy-click">Press the Enter key to simulate a button press</h3>
 
-**[Link to code](./#proxy-click)**
+**[Link to code](./proxy-click)**
 
 
 <h3 id="select-input-large">Select input with more breathing room</h3>
 
-**[Link to code](./#select-input-large)**
+**[Link to code](./select-input-large)**
 
 
 <h3 id="serve-images-files">Serve files (images/text files/etc) instead of webpages from a Shiny app </h3>
 
-**[Link to code](./#serve-images-files)**
+**[Link to code](./serve-images-files)**
 
 
 <h3 id="server-to-ui-variable">TODO</h3>
 
-**[Link to code](./#server-to-ui-variable)**
+**[Link to code](./server-to-ui-variable)**
 
 
 <h3 id="shinydashboard-sidebar-hide">Hide/show shinydashboard sidebar programatically</h3>
 
-**[Link to code](./#shinydashboard-sidebar-hide)**
+**[Link to code](./shinydashboard-sidebar-hide)**
 
 
 <h3 id="simple-toggle">Toggle a UI element (alternate between show/hide) with a button</h3>
 
-**[Link to code](./#simple-toggle)**
+**[Link to code](./simple-toggle)**
 
 
 <h3 id="update-input">Update multiple Shiny inputs without knowing input type </h3>
 
-**[Link to code](./#update-input)**
+**[Link to code](./update-input)**
 
 
 <h3 id="upload-file-names">TODO</h3>
 
-**[Link to code](./#upload-file-names)**
+**[Link to code](./upload-file-names)**
 
 
 <h3 id="url-inputs">Prepopulate Shiny inputs when an app loads based on URL parameters</h3>
 
-**[Link to code](./#url-inputs)**
+**[Link to code](./url-inputs)**
 
 
