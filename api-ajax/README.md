@@ -1,6 +1,6 @@
 # Simple AJAX system for Shiny apps (JS -> R -> JS communication)
 
-Sometimes it's useful to be able to call an R function from JavaScript and use the return value from R in JavaScript. This sort of communication is usually done with AJAX in JavaScript. This app shows how to implement a simple and ultra lightweight AJAX-like system in Shiny, to be able to call functions in R.
+Sometimes it's useful to be able to call an R function from JavaScript and use the return value from R back in JavaScript. This sort of communication is usually done with AJAX in JavaScript. This app shows how to implement a simple and ultra lightweight AJAX-like system in Shiny, to be able to call functions in R.
 
 Using this system is easy:  
 1. Include `api.js` in your Shiny app's UI  
