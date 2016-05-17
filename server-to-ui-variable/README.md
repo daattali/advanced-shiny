@@ -1,0 +1,3 @@
+# Use a variable from the server in a UI `conditionalPanel()`
+
+When using a conditional panel in the UI, the condition is usually an expression that uses an input value. But what happens when you want to use a conditional panel with a more complex condition that is not necessarily directly related to an input field? This example shows how to define an output variable in the server code that you can use in the UI. An alternative approach is to use the `show()` and `hide()` functions from the [shinyjs](https://github.com/daattali/shinyjs) package.

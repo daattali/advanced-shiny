@@ -1,0 +1,3 @@
+# Fix filenames of files selected via fileInput()
+
+When selecting files using a `fileInput()`, the filenames of the selected files are not retained. This is not usually a problem because usually you only care about the contents of a file and not its name. But sometimes you may actually need to know the original name of each selected file. This example shows how to write a simple function `fixUploadedFilesNames()` to rename uploaded files back to their original names.
