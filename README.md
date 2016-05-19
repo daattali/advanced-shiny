@@ -1,11 +1,12 @@
-R shiny tricks (shinyjs - reset inputs, disable, hide), global.R, 
-global.R, splitting off big ui/server into files
+# Shiny tips n tricks for common issues and for improved user experience
+
+shinyjs (reset inputs, disable, hide), global.R
 
 
 - [TODO complex directory structure](.)
 - [Simple AJAX system for Shiny apps (JS -> R -> JS communication)](#api-ajax) ([code](./api-ajax))
 - [Automatically stop a Shiny app when closing the browser tab](#auto-kill-app) ([code](./auto-kill-app))
-- [TODO](#busy-indicator) ([code](./busy-indicator))
+- ["Busy..." / "Done!" / "Error" feedback after pressing a button](#busy-indicator) ([code](./busy-indicator))
 - [Close the window (and stop the app) with a button click](#close-window) ([code](./close-window))
 - [Show user a generic error message when a Shiny error occurs in an output](#error-custom-message) ([code](./error-custom-message))
 - [Facebook login through JavaScript in Shiny](#fb-login) ([code](./fb-login))
@@ -40,11 +41,13 @@ Sometimes it's useful to be able to call an R function from JavaScript and use t
 
 When developing a Shiny app and running the app in the browser (as opposed to inside the RStudio Viewer), it can be annoying that when you close the browser window, the app is still running and you need to manually press "Esc" to kill it. By adding a single line to the server code `session$onSessionEnded(stopApp)`, a Shiny app will automatically stop running whenever the browser tab (or any session) is closed.
 
-<h2 id="busy-indicator">TODO</h2>
+<h2 id="busy-indicator">"Busy..." / "Done!" / "Error" feedback after pressing a button</h2>
 
 **[Link to code](./busy-indicator)**
 
+When the user clicks on a button, it usually results in some R code being run. Sometimes the resulting code is short and quick and the user doesn't even notice any delay, but sometimes the button click initialiates some long process or computation that can take more than 1 second to complete. In those cases, it might be a bit confusing to the user if there is no immediate feedback notifying that the action is being performed. For example, if the user clicked a button to load data from a database and it takes 3 seconds to connect to the database, it can be useful to show a "Connecting..." and then a "Done!" (or "Error") message, instead of just letting the user wait without seeing any message. Of course when the wait time is only 2-3 seconds it's not a big deal, but you can imagine that for a 20-second process, the user might think that something went wrong if there is no feedback. This example shows how to add some immediate feedback to the user after a button is clicked, including disabling/enabling the button and showing a success/error message when appropriate.
 
+[![Demo](./busy-indicator/busy-indicator.gif)](./busy-indicator)
 
 <h2 id="close-window">Close the window (and stop the app) with a button click</h2>
 
