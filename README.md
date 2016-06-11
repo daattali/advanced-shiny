@@ -2,31 +2,47 @@
 
 shinyjs (reset inputs, disable, hide), global.R
 
+- [Hide/show shinydashboard sidebar programatically](#shinydashboard-sidebar-hide) ([code](./shinydashboard-sidebar-hide))
+- [Pre-populate Shiny inputs when an app loads based on URL parameters](#url-inputs) ([code](./url-inputs))
+- [Use a variable from the server in a UI `conditionalPanel()`](#server-to-ui-variable) ([code](./server-to-ui-variable))
+- [Fix filenames of files uploaded via fileInput()](#upload-file-names) ([code](./upload-file-names))
+- [Update multiple Shiny inputs without knowing input type ](#update-input) ([code](./update-input))
+- [Toggle a UI element (alternate between show/hide) with a button](#simple-toggle) ([code](./simple-toggle))
+- [Serve files (images/text files/etc) instead of webpages from a Shiny app ](#serve-images-files) ([code](./serve-images-files))
 
-- [TODO complex directory structure](.)
+- [Shiny app with sequence of pages](#multiple-pages) ([code](./multiple-pages))
+
+
+- [Split app code across multiple files](#split-code) ([code](./split-code))
 - [Simple AJAX system for Shiny apps (JS -> R -> JS communication)](#api-ajax) ([code](./api-ajax))
 - [Automatically stop a Shiny app when closing the browser tab](#auto-kill-app) ([code](./auto-kill-app))
 - ["Busy..." / "Done!" / "Error" feedback after pressing a button](#busy-indicator) ([code](./busy-indicator))
 - [Close the window (and stop the app) with a button click](#close-window) ([code](./close-window))
 - [Show user a generic error message when a Shiny error occurs in an output](#error-custom-message) ([code](./error-custom-message))
-- [Facebook login through JavaScript in Shiny](#fb-login) ([code](./fb-login))
+
 - [Sharing images on Facebook](#fb-share-img) ([code](./fb-share-img))
 - [Hide a tab](#hide-tab) ([code](./hide-tab))
 - [Loading screen](#loading-screen) ([code](./loading-screen))
-- [Shiny app with sequence of pages](#multiple-pages) ([code](./multiple-pages))
-- [Multiple scrollspy - advanced](#multiple-scrollspy-advanced) ([code](./multiple-scrollspy-advanced))
-- [Multiple scrollspy - basic](#multiple-scrollspy-basic) ([code](./multiple-scrollspy-basic))
+
+
 - [Navigation in a Shiny app](#navigate-history) ([code](./navigate-history))
 - [Show a spinning "loading" animation while a plot is recalculating](#plot-spinner) ([code](./plot-spinner))
 - [Press the Enter key to simulate a button press](#proxy-click) ([code](./proxy-click))
-- [Select input with more breathing room](#select-input-large) ([code](./select-input-large))
-- [Serve files (images/text files/etc) instead of webpages from a Shiny app ](#serve-images-files) ([code](./serve-images-files))
-- [Use a variable from the server in a UI `conditionalPanel()`](#server-to-ui-variable) ([code](./server-to-ui-variable))
-- [Hide/show shinydashboard sidebar programatically](#shinydashboard-sidebar-hide) ([code](./shinydashboard-sidebar-hide))
-- [Toggle a UI element (alternate between show/hide) with a button](#simple-toggle) ([code](./simple-toggle))
-- [Update multiple Shiny inputs without knowing input type ](#update-input) ([code](./update-input))
-- [Fix filenames of files uploaded via fileInput()](#upload-file-names) ([code](./upload-file-names))
-- [Prepopulate Shiny inputs when an app loads based on URL parameters](#url-inputs) ([code](./url-inputs))
+
+
+
+- [Facebook login through JavaScript in Shiny](#fb-login) ([code](./fb-login))
+- [Multiple scrollspy - basic](#multiple-scrollspy-basic) ([code](./multiple-scrollspy-basic))
+- [Multiple scrollspy - advanced](#multiple-scrollspy-advanced) ([code](./multiple-scrollspy-advanced))
+
+
+
+
+
+<h2 id="split-code">Split app code across multiple files</h2>
+
+**[Link to code](./split-code)**
+
 
 
 <h2 id="api-ajax">Simple AJAX system for Shiny apps (JS -> R -> JS communication)</h2>
@@ -180,7 +196,7 @@ Shiny allows you to update an input element only if you know the type of input. 
 
 When selecting files using a `fileInput()`, the filenames of the selected files are not retained. This is not usually a problem because usually you only care about the contents of a file and not its name. But sometimes you may actually need to know the original name of each selected file. This example shows how to write a simple function `fixUploadedFilesNames()` to rename uploaded files back to their original names.
 
-<h2 id="url-inputs">Prepopulate Shiny inputs when an app loads based on URL parameters</h2>
+<h2 id="url-inputs">Pre-populate Shiny inputs when an app loads based on URL parameters</h2>
 
 **[Link to code](./url-inputs)**
 
