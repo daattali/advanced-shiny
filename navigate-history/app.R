@@ -6,7 +6,7 @@ ui <- navbarPage(
   id = "navbar",
   header = tagList(
     useShinyjs(),
-    extendShinyjs("www/app-shinyjs.js")
+    extendShinyjs("www/app-shinyjs.js", functions = c("updateHistory"))
   ),
   
   tabPanel("Home", value = "home",

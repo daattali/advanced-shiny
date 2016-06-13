@@ -10,7 +10,7 @@ shinyjs.navigate = function(url) {
 
 ui <- fluidPage(
   useShinyjs(),
-  extendShinyjs(text = jscode),
+  extendShinyjs(text = jscode, functions = c("navigate")),
   
   # Portion of the app that lets the user cutomize a plot and then see
   # a URL to serve that plot

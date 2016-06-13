@@ -6,7 +6,7 @@ ui <- navbarPage(
   id = "navbar",
   header = div(
     useShinyjs(),
-    extendShinyjs("www/app-shinyjs.js"),
+    extendShinyjs("www/app-shinyjs.js", functions = c("updateScrollspy")),
     includeCSS("www/app.css"),
     includeScript("https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.3/jquery.scrollTo.min.js")
   ),

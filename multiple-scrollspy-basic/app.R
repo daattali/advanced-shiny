@@ -7,7 +7,7 @@ ui <- navbarPage(
   
   header = div(
     useShinyjs(),
-    extendShinyjs("www/app-shinyjs.js"),
+    extendShinyjs("www/app-shinyjs.js", functions = c("updateScrollspy")),
     includeCSS("www/app.css"),
     
     # create a common scrollspy

@@ -1,15 +1,15 @@
 library(shinyjs)
-jscode <- "shinyjs.closewindow = function() { window.close(); }"
+jscode <- "shinyjs.closeWindow = function() { window.close(); }"
 
 ui <- fluidPage(
   useShinyjs(),
-  extendShinyjs(text = jscode),
+  extendShinyjs(text = jscode, functions = c("closeWindow")),
   actionButton("close", "Close window")
 )
 
 server <- function(input, output, session) {
   observeEvent(input$close, {
-    js$closewindow()
+    js$closeWindow()
     stopApp()
   })
 }
