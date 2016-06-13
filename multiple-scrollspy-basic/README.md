@@ -1,4 +1,4 @@
-# Multiple scrollspy - basic
+# Multiple scrollspy on same page - basic
 
 The Bootstrap *scrollspy* plugin does not support multiple scrollspy objects per page. This Shiny app demonstrates how to support scrollspy on multiple tabs by having one common scrollspy control that gets updated via JavaScript whenever a tab is changed to reflect the contents of the new tab. Look at the code to see how this is achieved.
 
