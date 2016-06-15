@@ -17,12 +17,15 @@ shinyjs (reset inputs, disable, hide), global.R
 - [Show user a generic error message when a Shiny error occurs in an output](#error-custom-message) ([code](./error-custom-message))
 - [Fix filenames of files uploaded via fileInput()](#upload-file-names) ([code](./upload-file-names))
 - [Shiny app with sequence of pages](#multiple-pages) ([code](./multiple-pages))
+- [Toggle a UI element (alternate between show/hide) with a button](#simple-toggle) ([code](./simple-toggle))
+- [Send a message from R to JavaScript](#message-r-to-javascript) ([code](./message-r-to-javascript))
+- [Send a message from JavaScript to R](#message-javascript-to-r) ([code](./message-javascript-to-r))))
+- [Send a message from JavaScript to R - force repetitive messages to get sent](#message-javascript-to-r-force) ([code](./message-javascript-to-r-force))))
+- [Press the Enter key to simulate a button press](#proxy-click) ([code](./proxy-click))
 - [Serve files (images/text files/etc) instead of webpages from a Shiny app](#serve-images-files) ([code](./serve-images-files))
 - [Update multiple Shiny inputs without knowing input type](#update-input) ([code](./update-input))
 - ["Busy..." / "Done!" / "Error" feedback after pressing a button](#busy-indicator) ([code](./busy-indicator))
-- [Press the Enter key to simulate a button press](#proxy-click) ([code](./proxy-click))
 - [Simple AJAX system for Shiny apps (JS -> R -> JS communication)](#api-ajax) ([code](./api-ajax))
-- [Toggle a UI element (alternate between show/hide) with a button](#simple-toggle) ([code](./simple-toggle))
 - [Navigation in a Shiny app (forward/backwards in history)](#navigate-history) ([code](./navigate-history))
 - [Sharing images on Facebook](#fb-share-img) ([code](./fb-share-img))
 - [Facebook login through JavaScript in Shiny](#fb-login) ([code](./fb-login))
@@ -129,6 +132,35 @@ This app demonstrates how to write a Shiny app that has a sequence of different 
 
 [![Demo](./multiple-pages/multiple-pages.gif)](./multiple-pages)
 
+<h2 id="simple-toggle">Toggle a UI element (alternate between show/hide) with a button</h2>
+
+**[Link to code](./simple-toggle)**
+
+Sometimes you want to toggle a section of the UI every time a button is clicked. This app shows how to achieve very basic toggle functionality using `conditionalPanel()`. If you want anything more advanced, you can use the `toggle()` function from the [shinyjs](https://github.com/daattali/shinyjs) package.
+
+<h2 id="message-r-to-javascript">Send a message from R to JavaScript</h2>
+
+**[Link to code](./message-r-to-javascript)**
+
+While Shiny is very powerful, there are many things that cannot be achieved in R and must be done in JavaScript. When including JavaScript code in a Shiny app, you sometimes need to send a message or a value from R to the JavaScript layer. This example how this is done.
+
+<h2 id="message-javascript-r">Send a message from JavaScript to R</h2>
+
+**[Link to code](./message-javascript-to-r)**
+
+In some shiny applications you may want to send a value from JavaScript to the R server. This can be useful in a variety of applications, for example if you want to capture a mouse click or a keyboard press of the user and tell R about it. This example shows how this is done.
+
+<h2 id="message-javascript-r-force">Send a message from JavaScript to R - force repetitive messages to get sent</h2>
+
+**[Link to code](./message-javascript-to-r-force)**
+
+TODO
+
+<h2 id="proxy-click">Press the Enter key to simulate a button press</h2>
+
+**[Link to code](./proxy-click)**
+
+This is a simple app with a tiny bit of JavaScript that shows you how to cause an Enter key press inside an input to trigger a click on a button.
 
 <h2 id="serve-images-files">Serve files (images/text files/etc) instead of webpages from a Shiny app </h2>
 
@@ -152,26 +184,11 @@ When the user clicks on a button, it usually results in some R code being run. S
 
 [![Demo](./busy-indicator/busy-indicator.gif)](./busy-indicator)
 
-<h2 id="proxy-click">Press the Enter key to simulate a button press</h2>
-
-**[Link to code](./proxy-click)**
-
-This is a simple app with a tiny bit of JavaScript that shows you how to cause an Enter key press inside an input to trigger a click on a button.
-
-
 <h2 id="api-ajax">Simple AJAX system for Shiny apps (JS -> R -> JS communication)</h2>
 
 **[Link to code](./api-ajax)**
 
 Sometimes it's useful to be able to call an R function from JavaScript and use the return value from R back in JavaScript. This sort of communication is usually done with AJAX in JavaScript. This app shows how to implement a simple and ultra lightweight AJAX-like system in Shiny, to be able to call functions in R.
-
-
-
-<h2 id="simple-toggle">Toggle a UI element (alternate between show/hide) with a button</h2>
-
-**[Link to code](./simple-toggle)**
-
-Sometimes you want to toggle a section of the UI every time a button is clicked. This app shows how to achieve very basic toggle functionality using `conditionalPanel()`. If you want anything more advanced, you can use the `toggle()` function from the [shinyjs](https://github.com/daattali/shinyjs) package.
 
 <h2 id="navigate-history">Navigation in a Shiny app (forward/backwards in history)</h2>
 

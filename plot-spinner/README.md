@@ -4,6 +4,8 @@ When a Shiny plot is recalculating, the plot gets grayed out. This app shows how
 
 The idea is to place a spinner image in the same container as the plot, center it, and give it a below-default z-index. Whenever the plot is recalculting, make the plot's z-index even lower so that the spinner will show.
 
+[See a real shiny app where I used this concept](http://daattali.com/shiny/ddpcr/)
+
 ---
 
 [![Demo](./plot-spinner.gif)](./plot-spinner.gif)

@@ -6,4 +6,8 @@ This example shows how to add some immediate feedback to the user after a button
 
 Note that I wrote this code before Shiny modules existed, but it can probably be re-written to work as a module. This exercise is left to the reader if you feel so inclined :)
 
+[See a real shiny app where I used this concept](http://daattali.com/shiny/ddpcr/)
+
+---
+
 [![Demo](./busy-indicator.gif)](./busy-indicator.gif)
