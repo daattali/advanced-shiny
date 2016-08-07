@@ -1,5 +1,7 @@
 # Shiny tips 'n tricks for common issues and for improved user experience
 
+> *Copyright 2016 [Dean Attali](http://deanattali.com). Licensed under the MIT license.*
+
 shinyjs (reset inputs, disable, hide), global.R
 
 ### Table of contents
