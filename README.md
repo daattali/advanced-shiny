@@ -1,3 +1,12 @@
+TODO dropdown with groups
+
+```
+  selectInput("country", "Select country", list(
+    "Europe" = c("Germany", "Spain"),
+    "North America" = c("Canada", "United States" = "USA")
+  ))
+```
+
 # Shiny tips 'n tricks for common issues and for improved user experience
 
 > *Copyright 2016 [Dean Attali](http://deanattali.com). Licensed under the MIT license.*
