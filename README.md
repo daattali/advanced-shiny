@@ -2,7 +2,7 @@
 
 > *Copyright 2016 [Dean Attali](http://deanattali.com). Licensed under the MIT license.*
 
-This document contains a collection of various Shiny tricks that I commonly use or that I know many people ask about.
+This document contains a collection of various Shiny tricks that I commonly use or that I know many people ask about. Each folder contains a complete functional Shiny app that demonstrates how to perform a non trivial task in Shiny.
 
 Since I first learned about [Shiny](http://shiny.rstudio.com/) 2 years ago, I was always looking for ways to push Shiny to its limits and I enjoyed finding ways to work around common problems people were having (the harder the problem, the better!). I've built [many Shiny apps](https://daattali.com/shiny/) over these 2 years, both for myself and as a contractor for other people/companies, and throughout this time I developed a handy list of Shiny design patterns and tricks, some of which I present here.
 
