@@ -1,4 +1,4 @@
-# Shiny tips 'n tricks for improving your apps and solving common problems
+# Shiny tips & tricks for improving your apps and solving common problems
 
 > *Copyright 2016 [Dean Attali](http://deanattali.com). Licensed under the MIT license.*
 
