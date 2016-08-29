@@ -1,0 +1,7 @@
+# Getting the value of an object in a running Shiny app without access to a debugger
+
+Sometimes you may need to know the value of some variable/function call in a Shiny app when you don't have easy access to debugging tools. For example, suppose you deploy your shiny app on shinyapps.io and it's running into a weird error there. You're sure that it's because one of the packages on the shinyapps.io server is not the version that you expect, but you want to make sure that your suspicion is correct. It's a bit difficult to debug on shinyapps.io (one thing you could do is try to use the log files), so what do you do? 
+
+There's a quick an easy way to see any value in real-time during a Shiny app: simply print it inside a `verbatimTextOutput()`! Make sure to use `renderPrint()` rather than `renderText()` to print the contents of the output.
+
+Other common usecases: if you're having problems reading a file and you're not sure if the Shiny app is in the directory you expect it to be, you can print `getwd()` to see where it is. Or you can print `list.files()` to see a list of all the files that Shiny can see from where it is. Or you can simply print the value of some variable if you need to know what it is while debugging.
