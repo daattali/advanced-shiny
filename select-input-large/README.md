@@ -6,4 +6,4 @@ One common CSS question in Shiny is how to make the select input dropdown menu h
 
 ---
 
-[![Demo](./selectize-large.gif)](./selectize-large.png)
+[![Demo](./selectize-large.png)](./selectize-large.png)

@@ -1,20 +1,14 @@
-TODO dropdown with groups
-
-```
-  selectInput("country", "Select country", list(
-    "Europe" = c("Germany", "Spain"),
-    "North America" = c("Canada", "United States" = "USA")
-  ))
-```
-
-# Shiny tips 'n tricks for common issues and for improved user experience
+# Shiny tips 'n tricks for improving your apps and solving common problems
 
 > *Copyright 2016 [Dean Attali](http://deanattali.com). Licensed under the MIT license.*
 
-shinyjs (reset inputs, disable, hide), global.R
+This document contains a collection of various Shiny tricks that I've had to commonly use or that I know many people ask about.
+
+deanattali.com/contact
 
 ### Table of contents
 
+- [Prereq: How to hide/show something in Shiny? How to disable an input? How do I reset an input?](#shinyjs)
 - [Show a spinning "loading" animation while a plot is recalculating](#plot-spinner) ([code](./plot-spinner))
 - [Hide a tab](#hide-tab) ([code](./hide-tab))
 - [Hide/show shinydashboard sidebar programmatically](#shinydashboard-sidebar-hide) ([code](./shinydashboard-sidebar-hide))
@@ -22,6 +16,7 @@ shinyjs (reset inputs, disable, hide), global.R
 - [Automatically stop a Shiny app when closing the browser tab](#auto-kill-app) ([code](./auto-kill-app))
 - [Close the window (and stop the app) with a button click](#close-window) ([code](./close-window))
 - [Select input with more breathing room](#select-input-large) ([code](./select-input-large))
+- [Select input with groupings of options](#dropdown-groups) ([code](./dropdown-groups))
 - [Pre-populate Shiny inputs when an app loads based on URL parameters](#url-inputs) ([code](./url-inputs))
 - [Split app code across multiple files (when codebase is large)](#split-code) ([code](./split-code))
 - [Use a variable from the server in a UI `conditionalPanel()`](#server-to-ui-variable) ([code](./server-to-ui-variable))
@@ -29,8 +24,8 @@ shinyjs (reset inputs, disable, hide), global.R
 - [Fix filenames of files uploaded via fileInput()](#upload-file-names) ([code](./upload-file-names))
 - [Shiny app with sequence of pages](#multiple-pages) ([code](./multiple-pages))
 - [Toggle a UI element (alternate between show/hide) with a button](#simple-toggle) ([code](./simple-toggle))
-- [Send a message from R to JavaScript](#message-r-to-javascript) ([code](./message-r-to-javascript))
-- [Send a message from JavaScript to R](#message-javascript-to-r) ([code](./message-javascript-to-r))))
+- [Send a message from R to JavaScript](#message-r-javascript) ([code](./message-r-to-javascript))
+- [Send a message from JavaScript to R](#message-javascript-r) ([code](./message-javascript-to-r))))
 - [Send a message from JavaScript to R - force repetitive messages to get sent](#message-javascript-to-r-force) ([code](./message-javascript-to-r-force))))
 - [Press the Enter key to simulate a button press](#proxy-click) ([code](./proxy-click))
 - [Serve files (images/text files/etc) instead of webpages from a Shiny app](#serve-images-files) ([code](./serve-images-files))
@@ -43,6 +38,9 @@ shinyjs (reset inputs, disable, hide), global.R
 - [Multiple scrollspy on same page - basic](#multiple-scrollspy-basic) ([code](./multiple-scrollspy-basic))
 - [Multiple scrollspy on same page - advanced](#multiple-scrollspy-advanced) ([code](./multiple-scrollspy-advanced))
 
+<h2 id="shinyjs">Prereq: How to hide/show something in Shiny? How to disable an input? How do I reset an input?</h2>
+
+A few very common questions in Shiny are "how do I hide/show something", "how do I disable an input", and "how do I reset an input". Many of the code samples in this document also rely on being able to do these things, so I wanted to start by saying that I will be using the [shinyjs](https://github.com/daattali/shinyjs) package to do all that. (Yes, of course I'm also shamelessly advertising shinyjs by saying this... but it is going to be useful for many concepts here)
 
 <h2 id="plot-spinner">Show a spinning "loading" animation while a plot is recalculating</h2>
 
@@ -95,7 +93,15 @@ This simple example shows how you can have a button that, when clicked, will clo
 
 One common CSS question in Shiny is how to make the select input dropdown menu have some more whitespace.  It's actually very easy to do with just two CSS rules, as demonstrated in this example.
 
-[![Demo](./select-input-large/selectize-large.gif)](./select-input-large)
+[![Demo](./select-input-large/selectize-large.png)](./select-input-large)
+
+<h2 id="dropdown-groups">Select input with groupings of option</h2>
+
+**[Link to code](./dropdown-groups)**
+
+This isn't really a trick as much as an [undocumented feature](https://github.com/rstudio/shiny/issues/1321) in Shiny that not many people know about. Usually when people write dropdowns in Shiny, all the options are just provided as one long list. But it is possible to have groups of items, and it's very easy to do.
+
+[![Demo](./dropdown-groups.png)](./dropdown-groups)
 
 <h2 id="url-inputs">Pre-populate Shiny inputs when an app loads based on URL parameters</h2>
 
@@ -165,7 +171,7 @@ In some shiny applications you may want to send a value from JavaScript to the R
 
 **[Link to code](./message-javascript-to-r-force)**
 
-TODO
+When you send a message from JS to R with the exact same value multiple times in a row, only the first time actually gets sent to Shiny. This can often be problematic, and this example shows a fairly simple workaround. 
 
 <h2 id="proxy-click">Press the Enter key to simulate a button press</h2>
 
@@ -233,6 +239,3 @@ The Bootstrap *scrollspy* plugin does not support multiple scrollspy objects per
 
 The Bootstrap *scrollspy* plugin does not support multiple scrollspy objects per page.
 This Shiny app demonstrates how to support scrollspy on multiple tabs by allowing each tab to have its own independent scrollspy control and using JavaScript to ensure only the scrollspy on the current tab is activated.
-
-
-

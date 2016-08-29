@@ -1,6 +1,10 @@
 # Send a message from JavaScript (client) to R (server) - force repetitive messages to get sent
 
-TODO
+Assuming you already know how to [send messages from JavaScript to Shiny](../message-javascript-to-r), you might notice that when you send a message with the exact same value multiple times in a row, only the first time actually gets sent to Shiny. For example, suppose you want to listen to every key that is pressed on the keyboard (in JavaScript) and send the value of every key press to R. If the user presses the keys *a*,*b*,*b*,*c*,*c*,*b* in that order, then Shiny will only receive *a*,*b*,*c*,*b* (notice that any repeating value was not received). This can often be problematic and might be resolved in Shiny in the future (you can follow the bug report [here](https://github.com/rstudio/shiny/issues/928)).
+
+Why is this happening? To understand the problem, it helps to remember that inputs are reactive values, and reactive values only trigger their dependencies when their value changes. This generally makes sense in Shiny: if you have some code that depends on an input, then you only want the code to re-run whenever the input's value changes. If the value of the input didn't change, then Shiny doesn't get notified. This idea works great for Shiny inputs, but when you want to send custom messages to Shiny from JavaScript, sometimes you might want to notify Shiny that an event occurred even if it's an identical event to the previous one.
+
+If you want to ensure that every message gets sent to Shiny, even if the value you want to send is the same as before, then a simple solution can be to simply include a random value in the message (along with the real message). By adding some random component to the message, it means that every call will be different, and it will always trigger an update in Shiny. Simply change `Shiny.onInputChange(name, value)` to `Shiny.onInputChange(name, [value, Math.random()])` and in R instead of listening to `input$name` you need to use `input$name[1]`. Essentially what we're doing is pass a 2-element vector, where the first element is the actual value we're interested in and the second element is just some random number.
 
 To send a message in the other direction (from R to JavaScript), see [Send a message from R to JavaScript](../message-r-to-javascript).
 
