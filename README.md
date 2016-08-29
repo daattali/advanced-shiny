@@ -4,7 +4,7 @@
 
 This document contains a collection of various Shiny tricks that I commonly use or that I know many people ask about.
 
-Since I first learned about [Shiny](http://shiny.rstudio.com/) 2 years ago, I was always looking for how I can push Shiny to its limits and I enjoyed finding ways to work around common problems people were having (the harder the problem, the better!). I've built [many Shiny apps](https://daattali.com/shiny/) over these 2 years, both for myself and as a contractor for other people/companies, and throughout this time I developed a handy list of Shiny design patterns and tricks, and I present some of them here.
+Since I first learned about [Shiny](http://shiny.rstudio.com/) 2 years ago, I was always looking for ways to push Shiny to its limits and I enjoyed finding ways to work around common problems people were having (the harder the problem, the better!). I've built [many Shiny apps](https://daattali.com/shiny/) over these 2 years, both for myself and as a contractor for other people/companies, and throughout this time I developed a handy list of Shiny design patterns and tricks, some of which I present here.
 
 This also seems like an appropriate place to mention that I am available for hire, so if you need some help with anything Shiny, feel free to [contact me](http://deanattali.com/contact).
 
@@ -26,9 +26,9 @@ This also seems like an appropriate place to mention that I am available for hir
 - [Fix filenames of files uploaded via fileInput()](#upload-file-names) ([code](./upload-file-names))
 - [Shiny app with sequence of pages](#multiple-pages) ([code](./multiple-pages))
 - [Toggle a UI element (alternate between show/hide) with a button](#simple-toggle) ([code](./simple-toggle))
-- [Send a message from R to JavaScript](#message-r-javascript) ([code](./message-r-to-javascript))
+- [Send a message from R to JavaScript](#message-r-to-javascript) ([code](./message-r-to-javascript))
 - [Send a message from JavaScript to R](#message-javascript-r) ([code](./message-javascript-to-r))
-- [Send a message from JavaScript to R - force repetitive messages to get sent](#message-javascript-to-r-force) ([code](./message-javascript-to-r-force))
+- [Send a message from JavaScript to R - force repetitive messages to get sent](#message-javascript-r-force) ([code](./message-javascript-to-r-force))
 - [Press the Enter key to simulate a button press](#proxy-click) ([code](./proxy-click))
 - [Serve files (images/text files/etc) instead of webpages from a Shiny app](#serve-images-files) ([code](./serve-images-files))
 - [Update multiple Shiny inputs without knowing input type](#update-input) ([code](./update-input))
@@ -97,7 +97,7 @@ One common CSS question in Shiny is how to make the select input dropdown menu h
 
 [![Demo](./select-input-large/selectize-large.png)](./select-input-large)
 
-<h2 id="dropdown-groups">Select input with groupings of option</h2>
+<h2 id="dropdown-groups">Select input with groupings of options</h2>
 
 **[Link to code](./dropdown-groups)**
 
