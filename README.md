@@ -103,7 +103,7 @@ One common CSS question in Shiny is how to make the select input dropdown menu h
 
 This isn't really a trick as much as an [undocumented feature](https://github.com/rstudio/shiny/issues/1321) in Shiny that not many people know about. Usually when people write dropdowns in Shiny, all the options are just provided as one long list. But it is possible to have groups of items, and it's very easy to do.
 
-[![Demo](./dropdown-groups.png)](./dropdown-groups)
+[![Demo](./dropdown-groups/dropdown-groups.png)](./dropdown-groups)
 
 <h2 id="url-inputs">Pre-populate Shiny inputs when an app loads based on URL parameters</h2>
 
