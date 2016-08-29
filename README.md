@@ -2,9 +2,11 @@
 
 > *Copyright 2016 [Dean Attali](http://deanattali.com). Licensed under the MIT license.*
 
-This document contains a collection of various Shiny tricks that I've had to commonly use or that I know many people ask about.
+I've first learned about [Shiny](http://shiny.rstudio.com/) 2 years ago, and I quickly become very passionate about it. From the very beginning, I kept looking how I could push Shiny to its limits and I had a lot of fun finding ways to work around common problems many people were having (the harder the problem, the better!). I've built [many Shiny apps](https://daattali.com/shiny/) over these 2 years, both for myself and for other people/companies as a contractor. Throughout this time I developed a handy list of Shiny design patterns and tricks that I use.
 
-deanattali.com/contact
+This document contains a collection of various such Shiny tricks that I've had to commonly use or that I know many people ask about.
+
+This seems like an appropriate place to mention that I am available for hire, so if you need some help with anything Shiny, feel free to [contact me](http://deanattali.com/contact).
 
 ### Table of contents
 
@@ -40,7 +42,7 @@ deanattali.com/contact
 
 <h2 id="shinyjs">Prereq: How to hide/show something in Shiny? How to disable an input? How do I reset an input?</h2>
 
-A few very common questions in Shiny are "how do I hide/show something", "how do I disable an input", and "how do I reset an input". Many of the code samples in this document also rely on being able to do these things, so I wanted to start by saying that I will be using the [shinyjs](https://github.com/daattali/shinyjs) package to do all that. (Yes, of course I'm also shamelessly advertising shinyjs by saying this... but it is going to be useful for many concepts here)
+A few very common questions in Shiny are "how do I hide/show something", "how do I disable an input", and "how do I reset an input". Many of the code samples in this document also rely on being able to do these things, so I wanted to start by saying that I will be using the [shinyjs](https://github.com/daattali/shinyjs) package to do all that. (Yes, I know it looks like I'm shamelessly advertising shinyjs by saying this... but it is going to be useful for many concepts here)
 
 <h2 id="plot-spinner">Show a spinning "loading" animation while a plot is recalculating</h2>
 
