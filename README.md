@@ -2,11 +2,11 @@
 
 > *Copyright 2016 [Dean Attali](http://deanattali.com). Licensed under the MIT license.*
 
-I've first learned about [Shiny](http://shiny.rstudio.com/) 2 years ago, and I quickly become very passionate about it. From the very beginning, I kept looking how I could push Shiny to its limits and I had a lot of fun finding ways to work around common problems many people were having (the harder the problem, the better!). I've built [many Shiny apps](https://daattali.com/shiny/) over these 2 years, both for myself and for other people/companies as a contractor. Throughout this time I developed a handy list of Shiny design patterns and tricks that I use.
+This document contains a collection of various Shiny tricks that I commonly use or that I know many people ask about.
 
-This document contains a collection of various such Shiny tricks that I've had to commonly use or that I know many people ask about.
+Since I first learned about [Shiny](http://shiny.rstudio.com/) 2 years ago, I was always looking for how I can push Shiny to its limits and I enjoyed finding ways to work around common problems people were having (the harder the problem, the better!). I've built [many Shiny apps](https://daattali.com/shiny/) over these 2 years, both for myself and as a contractor for other people/companies, and throughout this time I developed a handy list of Shiny design patterns and tricks, and I present some of them here.
 
-This seems like an appropriate place to mention that I am available for hire, so if you need some help with anything Shiny, feel free to [contact me](http://deanattali.com/contact).
+This also seems like an appropriate place to mention that I am available for hire, so if you need some help with anything Shiny, feel free to [contact me](http://deanattali.com/contact).
 
 ### Table of contents
 
