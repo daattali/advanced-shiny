@@ -1,3 +1,5 @@
+library(shiny)
+
 css <- "
 .shiny-output-error { visibility: hidden; }
 .shiny-output-error:before {

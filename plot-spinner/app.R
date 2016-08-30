@@ -1,3 +1,5 @@
+library(shiny)
+
 mycss <- "
 #plot-container {
   position: relative;

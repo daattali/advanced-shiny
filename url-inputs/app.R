@@ -1,3 +1,5 @@
+library(shiny)
+
 ui <- fluidPage(
   textInput("name", "Name"),
   numericInput("age", "Age", 25)

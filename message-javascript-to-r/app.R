@@ -1,3 +1,5 @@
+library(shiny)
+
 jscode <- '
 $(function() {
   $(document).keypress(function(e) {

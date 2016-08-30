@@ -1,4 +1,6 @@
+library(shiny)
 library(shinyjs)
+
 jscode <- "shinyjs.closeWindow = function() { window.close(); }"
 
 ui <- fluidPage(
