@@ -1,3 +1,5 @@
+library(shiny)
+
 jscode <- '
 Shiny.addCustomMessageHandler("mymessage", function(message) {
   alert(message);

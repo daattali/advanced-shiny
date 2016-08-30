@@ -1,3 +1,5 @@
+library(shiny)
+
 css <- "
 #large .selectize-input { line-height: 40px; }
 #large .selectize-dropdown { line-height: 30px; }"

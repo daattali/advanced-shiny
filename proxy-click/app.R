@@ -1,3 +1,5 @@
+library(shiny)
+
 jscode <- '
 $(function() {
   var $els = $("[data-proxy-click]");
