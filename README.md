@@ -26,7 +26,7 @@ This also seems like an appropriate place to mention that I am available for hir
   - [Split app code across multiple files (when codebase is large)](#split-code) ([code](./split-code))
   - [Use a variable from the server in a UI `conditionalPanel()`](#server-to-ui-variable) ([code](./server-to-ui-variable))
   - [Show user a generic error message when a Shiny error occurs in an output](#error-custom-message) ([code](./error-custom-message))
-  - [Show user a function's messages and warnings to the user](#show-warnings-messages) ([code](./show-warnings-messages))
+  - [Show a function's messages and warnings to the user](#show-warnings-messages) ([code](./show-warnings-messages))
   - [Fix filenames of files uploaded via fileInput()](#upload-file-names) ([code](./upload-file-names))
   - [Shiny app with sequence of pages](#multiple-pages) ([code](./multiple-pages))
   - [Toggle a UI element (alternate between show/hide) with a button](#simple-toggle) ([code](./simple-toggle))
@@ -145,7 +145,7 @@ When using a conditional panel in the UI, the condition is usually an expression
 
 When a Shiny output encounters an error, the exact error message will be shown to the user in place of the output. This is generally a good feature because it's easier to debug when you know the exact error. But sometimes this is undesireable if you want to keep the specifics of what happened unknown to the user, and you prefer to just show the user a generic "Some error occurred; please contact us" message. This may sound counter intuitive, but you can actually do this with a tiny bit of CSS, as this example shows.
 
-<h2 id="show-warnings-messages">Show user a function's messages and warnings to the user</h2>
+<h2 id="show-warnings-messages">Show a function's messages and warnings to the user</h2>
 
 **[Link to code](./show-warnings-messages)**
 
