@@ -26,6 +26,7 @@ This also seems like an appropriate place to mention that I am available for hir
   - [Split app code across multiple files (when codebase is large)](#split-code) ([code](./split-code))
   - [Use a variable from the server in a UI `conditionalPanel()`](#server-to-ui-variable) ([code](./server-to-ui-variable))
   - [Show user a generic error message when a Shiny error occurs in an output](#error-custom-message) ([code](./error-custom-message))
+  - [Show user a function's warnings and messages](#show-warnings-messages) ([code](./show-warnings-messages))
   - [Fix filenames of files uploaded via fileInput()](#upload-file-names) ([code](./upload-file-names))
   - [Shiny app with sequence of pages](#multiple-pages) ([code](./multiple-pages))
   - [Toggle a UI element (alternate between show/hide) with a button](#simple-toggle) ([code](./simple-toggle))
@@ -147,6 +148,10 @@ When a Shiny output encounters an error, the exact error message will be shown t
 
 
 <h2 id="upload-file-names">Fix filenames of files uploaded via fileInput()</h2>
+
+**[Link to code](./show-warnings-messages)**
+
+There may be times when you want to relay the warnings and/or messages from a function call to your app's user. You can show the messages that are sent to standerr in real time by combining `withCallingHandlers` with the the `html` function from [shinyjs](https://github.com/daattali/shinyjs). Note that this solution (as well as the accompanying example app) was originally given in a [posting]( http://stackoverflow.com/questions/30474538/possible-to-show-console-messages-written-with-message-in-a-shiny-ui) on stack overflow. 
 
 **[Link to code](./upload-file-names)**
 
