@@ -9,19 +9,20 @@ facebook = function() {
       // initialize facebook JDK
       (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
+        if (d.getElementById(id)) {return;}
         js = d.createElement(s);
         js.id = id;
-        js.src = 'http://connect.facebook.net/en_US/sdk.js';
+        js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));  
+      }(document, 'script', 'facebook-jssdk')); 
       window.fbAsyncInit = function() {
         FB.init({
-          appId: '978725282157807', //  fuf.me
+          appId: '587632811407957',  // YOUR APP ID GOES HERE
           cookie: true, 
-          version: 'v2.4'
+          version: 'v2.7'
         });
         FB.getLoginStatus(function(response) {
+          console.log(response);
           facebook.statusChangeCallback(response);
         });
       };
