@@ -39,7 +39,7 @@ This also seems like an appropriate place to mention that I am available for hir
   - [Update multiple Shiny inputs without knowing input type](#update-input) ([code](./update-input))
   - ["Busy..." / "Done!" / "Error" feedback after pressing a button](#busy-indicator) ([code](./busy-indicator))
   - [Simple AJAX system for Shiny apps (JS -> R -> JS communication)](#api-ajax) ([code](./api-ajax))
-  - [Use a custom function to convert the JavaScript data into an R object](#javascript-to-r-handler)
+  - [Use a custom function to convert the JavaScript data into an R object](#javascript-to-r-handler) ([code](./javascript-to-r-handler))
   - [Navigation in a Shiny app (forward/backwards in history)](#navigate-history) ([code](./navigate-history))
   - [Sharing images on Facebook](#fb-share-img) ([code](./fb-share-img))
   - [Facebook login through JavaScript in Shiny](#fb-login) ([code](./fb-login))
