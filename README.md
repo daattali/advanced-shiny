@@ -39,6 +39,7 @@ This also seems like an appropriate place to mention that I am available for hir
   - [Update multiple Shiny inputs without knowing input type](#update-input) ([code](./update-input))
   - ["Busy..." / "Done!" / "Error" feedback after pressing a button](#busy-indicator) ([code](./busy-indicator))
   - [Simple AJAX system for Shiny apps (JS -> R -> JS communication)](#api-ajax) ([code](./api-ajax))
+  - [Use a custom function to convert the JavaScript data into an R object](#javascript-to-r-handler)
   - [Navigation in a Shiny app (forward/backwards in history)](#navigate-history) ([code](./navigate-history))
   - [Sharing images on Facebook](#fb-share-img) ([code](./fb-share-img))
   - [Facebook login through JavaScript in Shiny](#fb-login) ([code](./fb-login))
@@ -225,6 +226,12 @@ When the user clicks on a button, it usually results in some R code being run. S
 **[Link to code](./api-ajax)**
 
 Sometimes it's useful to be able to call an R function from JavaScript and use the return value from R back in JavaScript. This sort of communication is usually done with AJAX in JavaScript. This app shows how to implement a simple and ultra lightweight AJAX-like system in Shiny, to be able to call functions in R.
+
+<h2 id="javascript-to-r-handler">Use a custom function to convert the JavaScript data into an R object</h2>
+
+**[Link to code](./javascript-to-r-handler)**
+
+When using `Shiny.onInputChange(name, data)` (as described [here](./message-javascript-to-r)), you are passing in a JavaScript object (`data`) and expect it to get converted to an R object (`input$name`). This conversion happens by serializing and deserializing the data to and from JSON. Usually `input$name` will look exactly like you'd expect it to, but it is possible for the conversion process to not do exactly what you want. Alternatively, you may just want to alter the data slightly in R before presenting it to Shiny.
 
 <h2 id="navigate-history">Navigation in a Shiny app (forward/backwards in history)</h2>
 
