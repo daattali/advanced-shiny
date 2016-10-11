@@ -45,6 +45,7 @@ This also seems like an appropriate place to mention that I am available for hir
   - [Facebook login through JavaScript in Shiny](#fb-login) ([code](./fb-login))
   - [Multiple scrollspy on same page - basic](#multiple-scrollspy-basic) ([code](./multiple-scrollspy-basic))
   - [Multiple scrollspy on same page - advanced](#multiple-scrollspy-advanced) ([code](./multiple-scrollspy-advanced))
+- [Updates](#updates)
 
 <h2 id="shinyjs">Prereq: How to hide/show something in Shiny? How to disable an input? How do I reset an input?</h2>
 
@@ -265,3 +266,11 @@ The Bootstrap *scrollspy* plugin does not support multiple scrollspy objects per
 
 The Bootstrap *scrollspy* plugin does not support multiple scrollspy objects per page.
 This Shiny app demonstrates how to support scrollspy on multiple tabs by allowing each tab to have its own independent scrollspy control and using JavaScript to ensure only the scrollspy on the current tab is activated.
+
+<h1 id="Updates">Updates</h1>
+
+This list is slowly growing with time. Here are the new tricks added since the post was originally published:
+
+- 2016-08-29: [Getting the value of an object in a running Shiny app without access to a debugger](#debug-value) 
+- 2016-09-03: [Show user a function's messages and warnings to the user](#show-warnings-messages)
+- 2016-09-16: [Use a custom function to convert the JavaScript data into an R object](#javascript-to-r-handler)
