@@ -272,5 +272,5 @@ This Shiny app demonstrates how to support scrollspy on multiple tabs by allowin
 This list is slowly growing with time. Here are the new tricks added since the post was originally published:
 
 - 2016-08-29: [Getting the value of an object in a running Shiny app without access to a debugger](#debug-value) 
-- 2016-09-03: [Show user a function's messages and warnings to the user](#show-warnings-messages)
+- 2016-09-03: [Show a function's messages and warnings to the user](#show-warnings-messages)
 - 2016-09-16: [Use a custom function to convert the JavaScript data into an R object](#javascript-to-r-handler)
