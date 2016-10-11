@@ -207,6 +207,8 @@ This is a simple app with a tiny bit of JavaScript that shows you how to cause a
 
 When I develop Shiny apps or packages for Shiny, I often find myself wanting to be able to run R code on-demand while the app is running. Outside of Shiny, in regular R programming, we have the R console where we can run any command at any point in time, but in Shiny we don't really have that.  So while developing, I often add a text input that lets me type any R code into it and then run it. This is very useful for testing.
 
+[![Demo](./run-arbitrary-code/run-arbitrary-code.gif)](./run-arbitrary-code)
+
 <h2 id="serve-images-files">Serve files (images/text files/etc) instead of webpages from a Shiny app </h2>
 
 **[Link to code](./serve-images-files)**
