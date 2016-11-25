@@ -21,6 +21,7 @@ This also seems like an appropriate place to mention that I am available for hir
   - [Select input with more breathing room](#select-input-large) ([code](./select-input-large))
   - [Select input with groupings of options](#dropdown-groups) ([code](./dropdown-groups))
   - [Getting the value of an object in a running Shiny app without access to a debugger](#debug-value) ([code](./debug-value))
+  - [Adding text (or inputs) to the navigation bar in a navbarPage](#navbar-add-text) ([code](./navbar-add-text))
 - Intermediate
   - [Pre-populate Shiny inputs when an app loads based on URL parameters](#url-inputs) ([code](./url-inputs))
   - [Split app code across multiple files (when codebase is large)](#split-code) ([code](./split-code))
@@ -119,6 +120,12 @@ This isn't really a trick as much as an [undocumented feature](https://github.co
 
 Sometimes you may need to know the value of some variable/function call in a Shiny app when you don't have easy access to debugging tools. For example, suppose you deploy your shiny app on shinyapps.io and it's running into a weird error there. You're sure that it's because one of the packages on the shinyapps.io server is not the version that you expect, but you want to make sure that your suspicion is correct. It's a bit difficult to debug on shinyapps.io (one thing you could do is try to use the log files), but there's a quick and easy way to see any value in a Shiny app in real-time. 
 
+<h2 id="navbar-add-text">Adding text (or inputs) to the navigation bar in a navbarPage</h2>
+
+**[Link to code](./navbar-add-text)**
+
+Traditionally, a `navbarPage()` only accepts tabs and menu items inside of it. Even though the Bootstrap navbar (which is what Shiny uses) supports adding text and input widgets into the navbar, Shiny doesn't have support for that. This app shows you how to very easily achieve that.
+
 <h2 id="url-inputs">Pre-populate Shiny inputs when an app loads based on URL parameters</h2>
 
 **[Link to code](./url-inputs)**
@@ -205,7 +212,11 @@ This is a simple app with a tiny bit of JavaScript that shows you how to cause a
 
 **[Link to code](./run-arbitrary-code)**
 
+**NOTE: This is now part of the shinyjs package -- look at the documentation for `?shinyjs::runcode`**
+
 When I develop Shiny apps or packages for Shiny, I often find myself wanting to be able to run R code on-demand while the app is running. Outside of Shiny, in regular R programming, we have the R console where we can run any command at any point in time, but in Shiny we don't really have that.  So while developing, I often add a text input that lets me type any R code into it and then run it. This is very useful for testing.
+
+[![Demo](./run-arbitrary-code/run-arbitrary-code.gif)](./run-arbitrary-code)
 
 <h2 id="serve-images-files">Serve files (images/text files/etc) instead of webpages from a Shiny app </h2>
 
@@ -282,3 +293,4 @@ This list is slowly growing with time. Here are the new tricks added since the p
 - 2016-09-03: [Show a function's messages and warnings to the user](#show-warnings-messages)
 - 2016-09-16: [Use a custom function to convert the JavaScript data into an R object](#javascript-to-r-handler)
 - 2016-10-11: [Run arbitrary code live in Shiny - great for testing during development](#run-arbitrary-code)
+- 2016-11-23: [Adding text (or inputs) to the navigation bar in a navbarPage](#navbar-add-text)
