@@ -5,6 +5,9 @@ shinyjs.getInputType = function(params) {
     shinyUpdateInputId : null
   });
   var id = params.id;
+
+  // Escape characterss that have special selector meaning in jQuery
+  id = id.replace( /(:|\.|\[|\]|,)/g, "\\$1" );
   var $el = $('#' + id);
   // find the enclosing shiny input container for the given id
   if (!$el.hasClass('shiny-input-container')) {
