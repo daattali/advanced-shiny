@@ -1,5 +1,7 @@
 # Shiny tips & tricks for improving your apps and solving common problems
 
+[![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/daattali)
+
 > *Copyright 2016 [Dean Attali](http://deanattali.com). Licensed under the MIT license.*
 
 This document contains a collection of various Shiny tricks that I commonly use or that I know many people ask about. Each folder contains a complete functional Shiny app that demonstrates how to perform a non trivial task in Shiny.
