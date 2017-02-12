@@ -50,9 +50,9 @@ This also seems like an appropriate place to mention that I am available for hir
   - [Multiple scrollspy on same page - basic](#multiple-scrollspy-basic) ([code](./multiple-scrollspy-basic))
   - [Multiple scrollspy on same page - advanced](#multiple-scrollspy-advanced) ([code](./multiple-scrollspy-advanced))
 - Very advanced
-  - [Create a reactive trigger](#reactive-trigger)([code](./reactive-trigger))
-  - [Create a reactive value that only triggers when its value changes](#reactive-dedupe)([code](./reactive-dedupe))
-  - [Create a cancellable long-running task](#forked-task)([code](./forked-task))
+  - [Create a reactive trigger](#reactive-trigger) ([code](./reactive-trigger))
+  - [Create a reactive value that only triggers when its value changes](#reactive-dedupe) ([code](./reactive-dedupe))
+  - [Create a cancellable long-running task](#forked-task) ([code](./forked-task))
 - [Updates](#updates)
 
 <h2 id="shinyjs">Prereq: How to hide/show something in Shiny? How to disable an input? How do I reset an input?</h2>
@@ -307,7 +307,7 @@ If you understand shiny and reactivity well, you will know that a reactive expre
 
 **[Link to code](./forked-task)**
 
-In shiny (or R in general), when you start running a function, you generally cannot do anything else until that function completes. This means that if the user of a shiny app does something that results in a 2-minute calculation, the entire app becomes unusable and the user has to wait 2 minutes before they can interact with the app again. This has been a problem for some people, and the shiny team is currently looking into providing a solution for this. In the meantime, Joe Cheng (author of Shiny) [came up with a nice workaroud](https://gist.github.com/jcheng5/9504798d93e5c50109f8bbaec5abe372)]. His solution will likely not work on Windows and it is not a robust fool-proof solution, but itcan get the job done. 
+In shiny (or R in general), when you start running a function, you generally cannot do anything else until that function completes. This means that if the user of a shiny app does something that results in a 2-minute calculation, the entire app becomes unusable and the user has to wait 2 minutes before they can interact with the app again. This has been a problem for some people, and the shiny team is currently looking into providing a solution for this. In the meantime, Joe Cheng (author of Shiny) [came up with a nice workaroud](https://gist.github.com/jcheng5/9504798d93e5c50109f8bbaec5abe372). His solution will likely not work on Windows and it is not a robust fool-proof solution, but itcan get the job done. 
 
 <h1 id="updates">Updates</h1>
 
