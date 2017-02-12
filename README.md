@@ -49,6 +49,10 @@ This also seems like an appropriate place to mention that I am available for hir
   - [Facebook login through JavaScript in Shiny](#fb-login) ([code](./fb-login))
   - [Multiple scrollspy on same page - basic](#multiple-scrollspy-basic) ([code](./multiple-scrollspy-basic))
   - [Multiple scrollspy on same page - advanced](#multiple-scrollspy-advanced) ([code](./multiple-scrollspy-advanced))
+- Very advanced
+  - [Create a reactive trigger](#reactive-trigger)([code](./reactive-trigger))
+  - [Create a reactive value that only triggers when its value changes](#reactive-dedupe)([code](./reactive-dedupe))
+  - [Create a cancellable long-running task](#forked-task)([code](./forked-task))
 - [Updates](#updates)
 
 <h2 id="shinyjs">Prereq: How to hide/show something in Shiny? How to disable an input? How do I reset an input?</h2>
@@ -287,6 +291,24 @@ The Bootstrap *scrollspy* plugin does not support multiple scrollspy objects per
 The Bootstrap *scrollspy* plugin does not support multiple scrollspy objects per page.
 This Shiny app demonstrates how to support scrollspy on multiple tabs by allowing each tab to have its own independent scrollspy control and using JavaScript to ensure only the scrollspy on the current tab is activated.
 
+<h2 id="reactive-trigger">Create a reactive trigger</h2>
+
+**[Link to code](./reactive-trigger)**
+
+A reactive trigger can be used when you want to be able to explicitly trigger a reactive expression. You can think of it as being similar to an action button, except instead of clicking on a button to trigger an expression, you can programatically cause the trigger. This concept and code was created by Joe Cheng (author of shiny).
+
+<h2 id="reactive-dedupe">Create a reactive value that only triggers when its value changes</h2>
+
+**[Link to code](./reactive-dedupe)**
+
+If you understand shiny and reactivity well, you will know that a reactive expression gets re-run whenever any of its reactive dependencies are invalidated. This is generally the desired behaviour, but there is one caveat that comes up occassionally: even if the underlying value of the reactive dependency hasn't changed, it can still be considered "invalidated". This can mean that a reactive expression will run again with exactly the same values because its dependencies have not changed, even though they're invalidated. Joe Cheng (author of shiny) has [a solution](https://github.com/rstudio/shiny/issues/1484#issuecomment-262812760) for this.
+
+<h2 id="forked-task">Create a cancellable long-running task</h2>
+
+**[Link to code](./forked-task)**
+
+In shiny (or R in general), when you start running a function, you generally cannot do anything else until that function completes. This means that if the user of a shiny app does something that results in a 2-minute calculation, the entire app becomes unusable and the user has to wait 2 minutes before they can interact with the app again. This has been a problem for some people, and the shiny team is currently looking into providing a solution for this. In the meantime, Joe Cheng (author of Shiny) [came up with a nice workaroud](https://gist.github.com/jcheng5/9504798d93e5c50109f8bbaec5abe372)]. His solution will likely not work on Windows and it is not a robust fool-proof solution, but itcan get the job done. 
+
 <h1 id="updates">Updates</h1>
 
 This list is slowly growing with time. Here are the new tricks added since the post was originally published:
@@ -296,3 +318,4 @@ This list is slowly growing with time. Here are the new tricks added since the p
 - 2016-09-16: [Use a custom function to convert the JavaScript data into an R object](#javascript-to-r-handler)
 - 2016-10-11: [Run arbitrary code live in Shiny - great for testing during development](#run-arbitrary-code)
 - 2016-11-23: [Adding text (or inputs) to the navigation bar in a navbarPage](#navbar-add-text)
+- 2017-02-12: Added a 'Very advanced' section with 3 clever reusable shiny constructs
