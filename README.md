@@ -63,7 +63,7 @@ A few very common questions in Shiny are "how do I hide/show something", "how do
 
 **[Link to code](./plot-spinner)**
 
-When a Shiny plot is recalculating, the plot gets grayed out. This app shows how you can add a spinner wheel on top of the plot while it is recalculating, to make it clear to the user that the plot is reloading. There can be many different ways to achieve a similar result using different combinations of HTML/CSS, this example is just the simplest one I came up with.
+When a Shiny plot is recalculating, the plot gets grayed out. This app shows how you can add a spinner wheel on top of the plot while it is recalculating, to make it clear to the user that the plot is reloading. There can be many different ways to achieve a similar result using different combinations of HTML/CSS, this example is just the simplest one I came up with. **Update**: There is now a package [`shinycssloaders`](https://cran.r-project.org/package=shinycssloaders) to do this easier! 
 
 [![Demo](./plot-spinner/plot-spinner.gif)](./plot-spinner)
 
