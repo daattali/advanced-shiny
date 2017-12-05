@@ -26,7 +26,7 @@ server <- function(input, output, session) {
     toggleState(id = "prevBtn", condition = rv$page > 1)
     toggleState(id = "nextBtn", condition = rv$page < NUM_PAGES)
     hide(selector = ".page")
-    show(sprintf("step%s", rv$page))
+    show(paste0("step", rv$page))
   })
   
   navPage <- function(direction) {
