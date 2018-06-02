@@ -25,4 +25,4 @@ Then you can instantiate a reactive trigger with
 myTrigger <- makeReactiveTrigger()
 ```
 
-To use it, you need to call `myTrigger$depend()` in any reactive code that should re-run when the trigger is fired, and you can call `myTrigger$trigger()` to set off the trigger.
+To use it, you need to call `myTrigger$depend()` in any reactive code that should re-run when the trigger is fired, and you can call `myTrigger$trigger()` to set off the trigger. You can have multiple reactive triggers, think of each one as a button that gets pressed programatically.
