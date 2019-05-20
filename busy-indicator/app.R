@@ -1,11 +1,8 @@
 library(shiny)
-library(shinyjs)
 
 source("helpers.R") # Load all the code needed to show feedback on a button click
 
 ui <- fluidPage(
-  useShinyjs(),
-  tags$style(appCSS),
   selectInput("select", "Select an option",
               c("This one is okay" = "ok",
                 "This will give an error" = "error")),
