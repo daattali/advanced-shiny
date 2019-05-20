@@ -1,25 +1,34 @@
-# All the code in this file needs to be copied to your Shiny app, and you need
-# to call `withBusyIndicatorUI()` and `withBusyIndicatorServer()` in your app.
-# You can also include the `appCSS` in your UI, as the example app shows.
+withBusyIndicatorCSS <- "
+.btn-loading-container {
+margin-left: 10px;
+font-size: 1.2em;
+}
+.btn-done-indicator {
+color: green;
+}
+.btn-err {
+margin-top: 10px;
+color: red;
+}
+"
 
-# =============================================
-
-# Set up a button to have an animated loading indicator and a checkmark
-# for better user experience
-# Need to use with the corresponding `withBusyIndicator` server function
 withBusyIndicatorUI <- function(button) {
   id <- button[['attribs']][['id']]
   div(
+    shinyjs::useShinyjs(),
+    singleton(tags$head(
+      tags$style(withBusyIndicatorCSS)
+    )),
     `data-for-btn` = id,
     button,
     span(
       class = "btn-loading-container",
-      hidden(
+      shinyjs::hidden(
         icon("spinner", class = "btn-loading-indicator fa-spin"),
         icon("check", class = "btn-done-indicator")
       )
     ),
-    hidden(
+    shinyjs::hidden(
       div(class = "btn-err",
           div(icon("exclamation-circle"),
               tags$b("Error: "),
@@ -52,7 +61,7 @@ withBusyIndicatorServer <- function(buttonId, expr) {
     value <- expr
     shinyjs::show(selector = doneEl)
     shinyjs::delay(2000, shinyjs::hide(selector = doneEl, anim = TRUE, animType = "fade",
-                     time = 0.5))
+                                       time = 0.5))
     value
   }, error = function(err) { errorFunc(err, buttonId) })
 }
@@ -65,17 +74,3 @@ errorFunc <- function(err, buttonId) {
   shinyjs::html(html = errMessage, selector = errElMsg)
   shinyjs::show(selector = errEl, anim = TRUE, animType = "fade")
 }
-
-appCSS <- "
-.btn-loading-container {
-  margin-left: 10px;
-  font-size: 1.2em;
-}
-.btn-done-indicator {
-  color: green;
-}
-.btn-err {
-  margin-top: 10px;
-  color: red;
-}
-"
