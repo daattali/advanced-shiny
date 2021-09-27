@@ -1,3 +1,5 @@
+# IMPORTANT: If you're using shiny version 1.6 or below, replace all instances of `navbar[[4]][[1]][[1]]` with `navbar[[3]][[1]]`
+
 library(shiny)
 
 # Call this function with all the regular navbarPage() parameters, plus a text parameter,
@@ -5,8 +7,8 @@ library(shiny)
 navbarPageWithText <- function(..., text) {
   navbar <- navbarPage(...)
   textEl <- tags$p(class = "navbar-text", text)
-  navbar[[3]][[1]]$children[[1]] <- htmltools::tagAppendChild(
-    navbar[[3]][[1]]$children[[1]], textEl)
+  navbar[[4]][[1]][[1]]$children[[1]] <- htmltools::tagAppendChild(
+    navbar[[4]][[1]][[1]]$children[[1]], textEl)
   navbar
 }
 
@@ -15,8 +17,8 @@ navbarPageWithText <- function(..., text) {
 navbarPageWithInputs <- function(..., inputs) {
   navbar <- navbarPage(...)
   form <- tags$form(class = "navbar-form", inputs)
-  navbar[[3]][[1]]$children[[1]] <- htmltools::tagAppendChild(
-    navbar[[3]][[1]]$children[[1]], form)
+  navbar[[4]][[1]][[1]]$children[[1]] <- htmltools::tagAppendChild(
+    navbar[[4]][[1]][[1]]$children[[1]], form)
   navbar
 }
 
