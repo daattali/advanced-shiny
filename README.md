@@ -1,6 +1,6 @@
 # Shiny tips & tricks for improving your apps and solving common problems
 
-[![Donate](http://i.imgur.com/vCIGFrH.png)](https://www.paypal.me/daattali)
+[![Donate](http://i.imgur.com/vCIGFrH.png)](https://www.paypal.me/daattali/20)
 
 > *Copyright 2016 [Dean Attali](http://deanattali.com). Licensed under the MIT license.*
 
