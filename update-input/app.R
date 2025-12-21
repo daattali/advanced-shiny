@@ -5,7 +5,7 @@ source("update-input.R")
 
 ui <- fluidPage(
   useShinyjs(),
-  extendShinyjs("www/app-shinyjs.js", functions = c("getInputType")),
+  extendShinyjs("app-shinyjs.js", functions = c("getInputType")),
   
   textInput("text", "Text input", "some text"),
   selectInput("select", "Select input", LETTERS),
